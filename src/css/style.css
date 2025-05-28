@@ -1,0 +1,265 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7f6;
+    color: #333;
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: #2a5d38;
+    font-size: 18px;
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    color: #d4e4d8 !important;
+}
+
+.hero {
+    background-image: url('/src/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.4); */
+    background: rgba(255, 255, 255, 0.2); /* белый с прозрачностью */
+    z-index: 1;
+}
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.btn-primary {
+    background-color: #2a5d38 !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background-color: #1e4728 !important;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #2a5d38;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.card, .custom-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 400px;
+    object-fit: contain;
+    width: 100%;
+    padding-top: 15px;
+}
+
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+    min-height: 60px;
+    flex-grow: 1;
+}
+
+.custom-section {
+    position: relative;
+    padding: 0;
+}
+
+.custom-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.custom-image {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.custom-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* Where to Buy Section */
+#where-to-buy {
+    background: linear-gradient(135deg, #e9f0ec 0%, #f5f7f6 100%);
+}
+
+.swiper {
+    width: 100%;
+    height: 450px; /* Increased height to accommodate pagination below images */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex !important; /* Принудительное использование flex */
+    justify-content: center !important; /* Центрирование по горизонтали */
+    align-items: center !important; /* Центрирование по вертикали */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 350px; /* Fixed height for slides */
+}
+
+.swiper-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: 100%; /* Ограничиваем ширину изображения */
+    max-height: 100%; /* Ограничиваем высоту изображения */
+    width: auto; /* Автоматическая ширина с сохранением пропорций */
+    height: auto; /* Автоматическая высота с сохранением пропорций */
+    object-fit: cover; /* Изображение помещается целиком, не обрезается */
+    border-radius: 15px;
+}
+
+.swiper-slide a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    bottom: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.swiper-slide a:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #2a5d38;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 0 !important; /* Position pagination below the slides */
+}
+
+.swiper-pagination-bullet {
+    background: #2a5d38;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.alert {
+    transition: opacity 0.5s ease-in-out;
+}
+
+footer {
+    background-color: #2a5d38;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+
+footer a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #d4e4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Background Colors */
+#about {
+    background-color: #fff;
+}
+
+#products {
+    background-color: #e9f0ec;
+}
+
+#achievements {
+    background-color: #2a5d38;
+    color: #fff;
+}
+
+#achievements .section-title {
+    color: #fff;
+}
+
